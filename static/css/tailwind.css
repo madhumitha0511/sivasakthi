@@ -1,0 +1,85 @@
+/* Empty placeholder, we'll use CDN for Tailwind for simplicity */
+/* Custom Tailwind CSS Extensions */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom animations and utilities */
+@layer utilities {
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .animate-slide-in {
+        animation: slideIn 0.8s ease-out;
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in;
+    }
+    
+    .animate-bounce-soft {
+        animation: bounceSoft 2s infinite;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #10b981 0%, #0d9488 50%, #1e40af 100%);
+    }
+    
+    .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .fade-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-on-scroll.animate-fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceSoft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Custom color classes */
+.text-emerald-custom { color: #10b981; }
+.text-teal-custom { color: #0d9488; }
+.text-blue-custom { color: #1e40af; }
+.text-gold-custom { color: #f59e0b; }
+
+.bg-emerald-custom { background-color: #10b981; }
+.bg-teal-custom { background-color: #0d9488; }
+.bg-blue-custom { background-color: #1e40af; }
+.bg-gold-custom { background-color: #f59e0b; }
+
+/* Form focus states */
+.focus\:ring-emerald-custom:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+}

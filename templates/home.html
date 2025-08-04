@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center text-white"
+         style="background-image: url('/static/images/race.jpg'); background-size: cover; background-position: center;">
+
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-4 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-float">
+            Welcome to Sri Sivasakthi
+        </h1>
+        <p class="text-xl md:text-2xl mb-4 opacity-90">
+            Nurturing Excellence Since 1996
+        </p>
+        <p class="text-lg mb-8 opacity-80">
+            Nursery & Primary School | Kavankarai, Puzhal
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ url_for('about') }}" 
+               class="bg-gold-custom text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-500 transition-all duration-300 hover-lift">
+                Discover Our Legacy
+            </a>
+            <a href="{{ url_for('admissions') }}" 
+               class="bg-white text-blue-custom px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover-lift">
+                Admissions Open 2025-26
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Stats Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div class="fade-on-scroll hover-lift p-6">
+                <div class="text-4xl font-bold text-emerald-custom mb-2">29+</div>
+                <div class="text-gray-600">Years of Excellence</div>
+            </div>
+            <div class="fade-on-scroll hover-lift p-6">
+                <div class="text-4xl font-bold text-teal-custom mb-2">17:1</div>
+                <div class="text-gray-600">Student-Teacher Ratio</div>
+            </div>
+            <div class="fade-on-scroll hover-lift p-6">
+                <div class="text-4xl font-bold text-blue-custom mb-2">1996</div>
+                <div class="text-gray-600">Established</div>
+            </div>
+            <div class="fade-on-scroll hover-lift p-6">
+                <div class="text-4xl font-bold text-gold-custom mb-2">9</div>
+                <div class="text-gray-600">Spacious Classrooms</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">About Sri Sivasakthi</h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    For nearly three decades, we have been shaping bright futures in Puzhal, Chennai. 
+                    Our Montessori-based approach combined with traditional values creates independent 
+                    thinkers and confident learners.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-child text-emerald-custom"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Nursery to Primary Focus</h3>
+                            <p class="text-gray-600 text-sm">Ages 2.5 to 11 years with personal attention</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-female text-teal-custom"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Caring Female Teachers</h3>
+                            <p class="text-gray-600 text-sm">Motherly care with professional expertise</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ url_for('about') }}" class="inline-block bg-emerald-custom text-white px-6 py-3 rounded-lg hover:bg-emerald-600 transition-colors duration-300 font-medium">
+                    Learn More About Us
+                </a>
+            </div>
+            <div class="fade-on-scroll">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <img src="/static/images/exhibition.jpg" alt="Children learning in classroom" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Learning Environment</h3>
+                    <p class="text-gray-600">Bright, spacious classrooms designed for young minds to explore, learn, and grow in a safe, nurturing environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Showcase -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12 fade-on-scroll">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Special Programs</h2>
+            <p class="text-xl text-gray-600">Beyond Academics - Holistic Development</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Silambam -->
+            <div class="bg-gradient-to-br from-emerald-400 to-teal-500 p-6 rounded-2xl text-white text-center hover-lift fade-on-scroll">
+                <img src="/static/images/silambam.jpg" alt="Silambam martial arts" class="w-full h-32 object-cover rounded-lg mb-4">
+                <i class="fas fa-fist-raised text-3xl mb-4 animate-bounce-soft"></i>
+                <h3 class="text-xl font-bold mb-2">Silambam</h3>
+                <p class="text-sm opacity-90">Traditional Tamil martial art for discipline and fitness</p>
+            </div>
+            
+            <!-- Bharatanatyam -->
+            <div class="bg-gradient-to-br from-pink-400 to-purple-500 p-6 rounded-2xl text-white text-center hover-lift fade-on-scroll">
+                <img src="/static/images/bharthanatiyam.jpg" alt="Bharatanatyam dance" class="w-full h-32 object-cover rounded-lg mb-4">
+                <i class="fas fa-hand-peace text-3xl mb-4 animate-bounce-soft"></i>
+                <h3 class="text-xl font-bold mb-2">Bharatanatyam</h3>
+                <p class="text-sm opacity-90">Classical dance for grace and cultural connection</p>
+            </div>
+            
+            <!-- Archery -->
+            <div class="bg-gradient-to-br from-orange-400 to-red-500 p-6 rounded-2xl text-white text-center hover-lift fade-on-scroll">
+                <img src="/static/images/archery.jpg" alt="Archery training" class="w-full h-32 object-cover rounded-lg mb-4">
+                <i class="fas fa-bullseye text-3xl mb-4 animate-bounce-soft"></i>
+                <h3 class="text-xl font-bold mb-2">Archery</h3>
+                <p class="text-sm opacity-90">Focus, precision and mental concentration</p>
+            </div>
+            
+            <!-- Abacus -->
+            <div class="bg-gradient-to-br from-blue-400 to-indigo-500 p-6 rounded-2xl text-white text-center hover-lift fade-on-scroll">
+                <img src="/static/images/activity.jpg" alt="Abacus learning" class="w-full h-32 object-cover rounded-lg mb-4">
+                <i class="fas fa-calculator text-3xl mb-4 animate-bounce-soft"></i>
+                <h3 class="text-xl font-bold mb-2">Abacus</h3>
+                <p class="text-sm opacity-90">Mental math and cognitive development</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="{{ url_for('programs') }}" class="inline-block bg-blue-custom text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 font-medium">
+                Explore All Programs
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12 fade-on-scroll">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Sri Sivasakthi?</h2>
+            <p class="text-xl text-gray-600">Excellence in Education, Values in Life</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift fade-on-scroll">
+                <img src="/static/images/mime.jpg" alt="Montessori learning" class="w-full h-40 object-cover rounded-lg mb-6">
+                <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-child text-2xl text-emerald-custom"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4">Montessori Learning</h3>
+                <p class="text-gray-600 text-center">Child-centered approach that nurtures natural curiosity and independence in learning.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift fade-on-scroll">
+                <img src="/static/images/kids.jpg" alt="Personal attention" class="w-full h-40 object-cover rounded-lg mb-6">
+                <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-users text-2xl text-teal-custom"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4">Personal Attention</h3>
+                <p class="text-gray-600 text-center">Small class sizes ensure every child receives individual care and attention.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift fade-on-scroll">
+                <img src="/static/images/project.jpg" alt="Values education" class="w-full h-40 object-cover rounded-lg mb-6">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-heart text-2xl text-blue-custom"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4">Values Education</h3>
+                <p class="text-gray-600 text-center">Building character with strong moral values and cultural heritage.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 gradient-bg text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div class="fade-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our School Family?</h2>
+            <p class="text-xl mb-8 opacity-90">Start your child's educational journey with us today!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{{ url_for('admissions') }}" class="bg-gold-custom text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-500 transition-all duration-300 hover-lift">
+                    Apply for Admission
+                </a>
+                <a href="{{ url_for('admissions') }}" class="bg-white text-blue-custom px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover-lift">
+                    Schedule a Visit
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
