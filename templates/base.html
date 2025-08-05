@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Sri Sivasakthi Nursery & Primary School{% endblock %}</title>
     
-   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -106,6 +107,7 @@
     </script>
 </body>
 </html>
+
 
 
 
