@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<!-- Gallery Hero Section -->
+<section class="relative text-white py-16 overflow-hidden"
+    style="background-image: url('/static/images/race.jpg'); background-size: cover; background-position: center;">
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative container mx-auto px-4 text-center z-10">
+        <div class="animate-fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Gallery</h1>
+            <p class="text-xl opacity-90">A Glimpse of Our School Life</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Images Section -->
+<section class="py-20 bg-gray-100 animate-fade-in">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {% for image in images %}
+                <div class="overflow-hidden rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    <!-- Lightbox setup -->
+                    <a href="{{ url_for('static', filename='images/' + image) }}" 
+                       data-lightbox="school-gallery" 
+                       data-title="Image {{ loop.index }}">
+                        <img src="{{ url_for('static', filename='images/' + image) }}" 
+                             alt="Gallery Image"
+                             class="w-full h-48 object-cover transition-all duration-500 ease-in-out">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<!-- Lightbox2 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+<!-- Lightbox2 configuration -->
+<script>
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,  // Enables arrow navigation
+  'alwaysShowNavOnTouchDevices': true,
+  'disableScrolling': true
+});
+</script>
+
+<!-- Custom fade-in animation -->
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+</style>
+{% endblock %}
