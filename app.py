@@ -10,8 +10,8 @@ app.secret_key = 'srisivasakthischool-secret-key-2025'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'madhumitha0511@gmail.com'
-app.config['MAIL_PASSWORD'] = 'qhrs kdif wzjy irhi'  # Replace this!
+app.config['MAIL_USERNAME'] = 'ranjithpython072@gmail.com'  # Replace with your email
+app.config['MAIL_PASSWORD'] = 'amus rjot xbzr unno'
 app.config['MAIL_DEFAULT_SENDER'] = 'madhumitha0511@gmail.com'
 
 mail = Mail(app)
@@ -130,3 +130,4 @@ Admissions Department - Automated System
 
 if __name__ == '__main__':
     app.run(debug=True)
+
