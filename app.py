@@ -12,7 +12,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'ranjithpython072@gmail.com'  # Replace with your email
 app.config['MAIL_PASSWORD'] = 'amus rjot xbzr unno'
-app.config['MAIL_DEFAULT_SENDER'] = 'madhumitha0511@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'ranjithpython072@gmail.com'
 
 mail = Mail(app)
 
@@ -108,7 +108,7 @@ Admissions Department - Automated System
         
         admin_msg = Message(
             subject=admin_subject,
-            recipients=['madhumitha0511@gmail.com'],  # Admin email
+            recipients=['info@srisivasakthischool.comm'],  # Admin email
             body=admin_body
         )
         
@@ -130,4 +130,5 @@ Admissions Department - Automated System
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
