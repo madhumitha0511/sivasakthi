@@ -108,7 +108,7 @@ Admissions Department - Automated System
         
         admin_msg = Message(
             subject=admin_subject,
-            recipients=['info@srisivasakthischool.comm'],  # Admin email
+            recipients=['info@srisivasakthischool.com'],  # Admin email
             body=admin_body
         )
         
@@ -130,5 +130,6 @@ Admissions Department - Automated System
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
