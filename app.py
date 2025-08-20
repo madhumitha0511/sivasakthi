@@ -11,7 +11,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'ranjithpython072@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'amus rjot xbzr unno'
+app.config['MAIL_PASSWORD'] = 'amusrjotxbzrunno'
 app.config['MAIL_DEFAULT_SENDER'] = 'ranjithpython072@gmail.com'
 
 mail = Mail(app)
@@ -130,6 +130,7 @@ Admissions Department - Automated System
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
 
