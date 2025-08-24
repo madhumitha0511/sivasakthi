@@ -1,0 +1,74 @@
+<footer class="bg-gray-900 text-white">
+    <!-- Main Footer -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- School Info -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-emerald-custom rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Sri Sivasakthi School</h3>
+                        <p class="text-sm text-gray-400">Excellence Since 1996</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 max-w-md">
+                    Nurturing young minds through Montessori education, traditional values, and special programs like Silambam, Bharatanatyam, Archery & Abacus.
+                </p>
+                
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-emerald-custom mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="{{ url_for('home') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">Home</a>
+                    <a href="{{ url_for('about') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">About Us</a>
+                    <a href="{{ url_for('programs') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">Our Programs</a>
+                    <a href="{{ url_for('academics') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">Academics</a>
+                     <a href="{{ url_for('gallery') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">Gallery</a>
+                    <a href="{{ url_for('admissions') }}" class="block text-gray-400 hover:text-white transition-colors duration-300 text-sm">Admissions</a>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-semibold text-emerald-custom mb-4">Contact</h4>
+                <div class="space-y-2 text-gray-400 text-sm">
+                    <p><i class="fas fa-map-marker-alt text-emerald-custom mr-2"></i>Kavankarai, Puzhal</p>
+                   <div class="flex items-center space-x-4">
+<div class="flex items-start space-x-3">
+  <!-- Phone Icon -->
+  <i class="fas fa-phone text-emerald-custom mt-1"></i>
+
+  <!-- Phone Numbers -->
+  <div class="flex flex-col">
+    <a href="tel:+919876543210" class="hover:underline">+91 98765 43210 ;</a>
+    <a href="tel:+917358365022" class="hover:underline">+91 73583 65022</a>
+  </div>
+</div>
+
+</div>
+
+                    <p><i class="fas fa-envelope text-emerald-custom mr-2"></i>srisivashakthi.primary@gmail.com</p>
+                </div>
+                <a href="{{ url_for('admissions') }}" class="inline-block mt-4 bg-emerald-custom text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors duration-300 text-sm font-medium">
+                    Enquire Now
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 bg-gray-950">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2025 Sri Sivasakthi Nursery & Primary School. All rights reserved.</p>
+                <p>29 Years of Educational Excellence | Since 1996</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
